@@ -1,12 +1,15 @@
 #!/usr/bin/env node
-const resolve = require('path').resolve
+const { extname, resolve } = require('path')
 const chokidar = require('chokidar')
 const stylelint = require('stylelint')
 
-const globPattern = process.argv.slice(-1)
+const [configFile, globPattern] = process.argv.slice(-2)
+
+const cwd = process.cwd()
 
 const fixFiles = function(files) {
   return stylelint.lint({
+    configFile,
     files,
     fix: true
   })
