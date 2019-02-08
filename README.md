@@ -15,7 +15,7 @@ In `package.json`
 ```json
 {
   "scripts": {
-    "stylelint-watch": "stylelint-watch-autofix .stylelintrc.js \"src/**/*.{css,vue}\""
+    "stylelint-watch": "stylelint-watch-autofix css \"src/**/*.{css,vue}\""
   }
 }
 ```

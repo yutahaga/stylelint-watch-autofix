@@ -1,18 +1,23 @@
 #!/usr/bin/env node
-const { extname, resolve } = require('path')
+const { resolve } = require('path')
 const chokidar = require('chokidar')
 const stylelint = require('stylelint')
 
-const [configFile, globPattern] = process.argv.slice(-2)
-
 const cwd = process.cwd()
+let [syntax, globPattern] = process.argv.slice(-2)
+const defaultOptions = {
+  fix: true
+}
+if (!/^css$/i.test(syntax)) {
+  defaultOptions.syntax = syntax
+}
 
 const fixFiles = function(files) {
-  return stylelint.lint({
-    configFile,
-    files,
-    fix: true
-  })
+  return stylelint.lint(
+    Object.assign({}, defaultOptions, {
+      files
+    })
+  )
 }
 
 const ansi = {
@@ -27,7 +32,7 @@ chokidar
     interval: 300
   })
   .on('change', function(file) {
-    return fixFiles([resolve(__dirname, file)])
+    return fixFiles([resolve(cwd, file)])
       .then(() => {
         console.log(`${ansi.green}[stylelint]${ansi.reset} Fixed ${file}`)
       })
