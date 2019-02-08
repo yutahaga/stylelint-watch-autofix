@@ -6,3 +6,14 @@
 ```sh
 npm i yutahaga/stylelint-watch-autofix#master -D
 ```
+
+## Usage
+
+In `package.json`
+```json
+{
+  "scripts": {
+    "stylelint-watch": "stylelint-watch-autofix \"src/**/*.{css,vue}\""
+  }
+}
+```
