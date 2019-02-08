@@ -1,0 +1,22 @@
+{
+  "name": "stylelint-watch-autofix",
+  "version": "0.1.0",
+  "description": "ファイルを監視して変更があったら自動で Stylelint で行う CLI です。",
+  "bin": {
+    "stylelint-watch-autofix": "bin/autofix.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yutahaga/stylelint-watch-autofix.git"
+  },
+  "author": "Yuta Haga <yutahaga7@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yutahaga/stylelint-watch-autofix/issues"
+  },
+  "homepage": "https://github.com/yutahaga/stylelint-watch-autofix#readme",
+  "dependencies": {
+    "chokidar": "^2.1.0",
+    "stylelint": "^9.10.1"
+  }
+}
