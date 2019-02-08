@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const resolve = require('path').resolve
 const chokidar = require('chokidar')
 const stylelint = require('stylelint')
