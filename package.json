@@ -1,5 +1,5 @@
 {
-  "name": "stylelint-watch-autofix",
+  "name": "@yutahaga/stylelint-watch-autofix",
   "version": "0.1.0",
   "description": "ファイルを監視して変更があったら自動で Stylelint で行う CLI です。",
   "bin": {

@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-npm i yutahaga/stylelint-watch-autofix#master -D
+npm i @yutahaga/stylelint-watch-autofix -D
 ```
 
 ## Usage
